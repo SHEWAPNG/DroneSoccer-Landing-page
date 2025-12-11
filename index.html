@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Drone Soccer Events — Inflatable Drone Pit</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      // Tailwind customization (tiny tweaks, nothing crazy)
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              accent: "#16b9b3",
+              "accent-dark": "#12928e",
+              "dark-text": "#1a1a1a",
+              "muted-text": "#666",
+              "light-bg": "#f8f9fa",
+              "border-light": "#e5e7eb",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      /* Normalize some vibes */
+      body {
+        background: #fff;
+        color: #1a1a1a;
+        font-family: Inter, sans-serif;
+      }
+
+      .btn {
+        transition: 0.2s all ease;
+      }
+    </style>
+  </head>
+
+  <body class="antialiased">
+
+    <!-- Banner -->
+    <section 
+      class="relative w-full min-h-[150px] h-[min(260px,25vw)] bg-cover bg-center rounded-xl mb-10 flex items-center justify-center overflow-hidden"
+      style="background-image: url('sambqnneer.jpg');"
+    >
+      <div class="absolute inset-0 bg-black/50 rounded-xl flex items-center justify-center">
+        <h1 class="text-white text-[min(40px,6vw)] font-extrabold drop-shadow-lg">
+          Drone Soccer Events
+        </h1>
+      </div>
+    </section>
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+
+      <!-- Header -->
+      <header class="flex items-center justify-between py-4 border-b border-border-light mb-10 relative">
+        
+        <!-- Brand -->
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 bg-accent text-white font-bold flex items-center justify-center rounded-lg shadow-md">
+            DS
+          </div>
+          <div>
+            <p class="font-extrabold text-lg">DroneSoccer Events</p>
+            <p class="text-xs text-muted-text">Learn how to fly a drone</p>
+          </div>
+        </div>
+
+        <!-- Desktop nav -->
+        <nav class="hidden md:flex items-center space-x-5">
+          <a 
+            href="https://www.linkedin.com/in/samscully/" 
+            target="_blank"
+            class="text-muted-text text-sm font-semibold hover:text-dark-text transition"
+          >
+            Organizer
+          </a>
+
+          <button 
+            class="btn bg-accent text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-accent-dark shadow-lg"
+            onclick="document.getElementById('book').scrollIntoView({ behavior:'smooth' })"
+          >
+            Book Event
+          </button>
+        </nav>
+
+        <!-- Mobile menu -->
+        <button 
+          class="md:hidden bg-accent text-white p-2 rounded-lg shadow-md text-xl"
+          onclick="toggleMobileMenu()"
+        >
+          ☰
+        </button>
+
+        <nav 
+          id="mobileNav"
+          class="hidden absolute top-full right-0 mt-3 bg-white border border-border-light p-4 rounded-lg shadow-xl flex-col space-y-3 w-44 z-50"
+        >
+          <a href="https://www.linkedin.com/in/samscully/" target="_blank" class="text-sm font-semibold text-muted-text">
+            Organizer
+          </a>
+
+          <button 
+            class="btn bg-accent text-white w-full px-5 py-2 rounded-lg text-sm font-semibold hover:bg-accent-dark"
+            onclick="document.getElementById('book').scrollIntoView({ behavior:'smooth' }); toggleMobileMenu();"
+          >
+            Book Event
+          </button>
+        </nav>
+      </header>
+
+      <!-- Hero Section -->
+      <section class="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 items-center py-10">
+        
+        <!-- Left -->
+        <div>
+          <span class="bg-[#e7fffd] text-[#0c6f6c] px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
+            All events
+          </span>
+
+          <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mt-4 leading-tight">
+            Drone soccer events for kids & teens
+          </h2>
+
+          <p class="text-muted-text text-lg mt-3 mb-6">
+            High-energy drone soccer sessions with operators, inflatable pit, goggles, and mini-tournaments. Perfect for all school events.
+          </p>
+
+          <div class="bg-light-bg border border-border-light px-4 py-3 rounded-xl text-xl font-bold inline-block shadow-inner">
+             We will host these Events for $700 
+          </div>
+
+          <div class="flex flex-wrap gap-4 mt-6">
+            <button 
+              class="btn bg-accent text-white px-8 py-3 rounded-lg font-semibold hover:bg-accent-dark shadow-xl"
+              onclick="document.getElementById('book').scrollIntoView({ behavior:'smooth' })"
+            >
+              Book Now
+            </button>
+
+            <button 
+              class="border-2 border-accent text-accent px-8 py-3 rounded-lg font-semibold hover:bg-accent hover:text-white hover:shadow-md transition"
+              onclick="alert('Tell us your date and location — we’ll confirm availability.')"
+            >
+              Check Availability
+            </button>
+          </div>
+
+          <p class="text-muted-text text-sm mt-4">
+           
+          </p>
+        </div>
+
+        <!-- Right card -->
+        <aside class="bg-white border border-border-light p-6 rounded-xl shadow-lg">
+          <a href="https://www.linkedin.com/in/samscully/" target="_blank">
+            <div 
+              class="w-full h-64 rounded-lg bg-cover bg-center mb-4 hover:scale-[1.03] transition"
+              style="background-image:url('drone 2.jpg')"
+            ></div>
+          </a>
+
+          <p class="font-bold text-lg">Ready-made fun</p>
+          <p class="text-muted-text text-sm mt-1 leading-relaxed">
+            We handle setup and run the event — you just enjoy the chaos and fun. Customizable add-ons available.
+          </p>
+        </aside>
+      </section>
+
+      <!-- Trusted by -->
+      <section class="mt-14 py-8 border-t border-border-light">
+        <h3 class="text-2xl font-bold mb-6 text-center">Trusted by</h3>
+
+        <div class="flex flex-wrap justify-center gap-4">
+          <!-- partner cards stay same -->
+        </div>
+      </section>
+
+      <!-- Who comes to play -->
+      <section class="mt-16">
+        <h3 class="text-3xl font-bold mb-2">Who comes to play</h3>
+        <p class="text-muted-text text-lg mb-8">Kids, teens — even adults who refuse to grow up.</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- card 1 -->
+          <div class="bg-white p-6 rounded-xl text-center border border-border-light shadow-md hover:shadow-xl transition">
+            <a href="drone1.jpg" target="_blank">
+              <img src="drone1.jpg" class="w-20 h-20 rounded-full object-cover mx-auto border-4 border-accent/20 mb-3 cursor-pointer" />
+            </a>
+            <h4 class="font-bold text-xl">Kids (6–12)</h4>
+            <p class="text-muted-text text-sm mt-2">Perfect for birthdays & school fun days.</p>
+          </div>
+
+          <!-- card 2 -->
+          <div class="bg-white p-6 rounded-xl text-center border border-border-light shadow-md hover:shadow-xl transition">
+            <a href="drone 2.jpg" target="_blank">
+              <img src="drone 2.jpg" class="w-20 h-20 rounded-full object-cover mx-auto border-4 border-accent/20 mb-3 cursor-pointer" />
+            </a>
+            <h4 class="font-bold text-xl">Teens (13–17)</h4>
+            <p class="text-muted-text text-sm mt-2">For the competitive tech bros & sisters.</p>
+          </div>
+
+          <!-- card 3 -->
+          
+      </section>
+
+      <!-- Booking -->
+      <section id="book" class="mt-20 mb-14 flex flex-col md:flex-row gap-6">
+        
+        <!-- form -->
+        <div class="flex-1">
+          <div class="bg-white p-6 sm:p-8 rounded-xl border border-border-light shadow-xl">
+            <h3 class="text-2xl font-bold">Ready to roll? Book a drone soccer event</h3>
+            <p class="text-muted-text mt-1">
+              Flat rate: <strong>$700</strong>. We’ll confirm details when we reach out.
+            </p>
+
+            <form onsubmit="event.preventDefault(); handleBooking();" class="mt-5 grid gap-4">
+              <input id="name" type="text" placeholder="Your name" required class="input">
+              <input id="email" type="email" placeholder="Email" required class="input">
+              <input id="location" type="text" placeholder="Event location (city)" required class="input">
+              <input id="date" type="date" required class="input">
+
+              <button type="submit" class="btn bg-accent text-white py-3 rounded-lg font-semibold hover:bg-accent-dark shadow-md mt-1">
+                Book for $700
+              </button>
+            </form>
+
+            <div id="book-msg" class="text-xs text-muted-text mt-2"></div>
+          </div>
+        </div>
+
+        <!-- custom quote -->
+        <div class="md:w-80">
+          <div class="bg-light-bg p-6 rounded-xl border border-border-light shadow-md h-full">
+            <h4 class="text-xl font-bold">Need a custom quote?</h4>
+            <p class="text-muted-text mt-2 mb-4">
+              For multi-day events or extra drones, message the organizer.
+            </p>
+
+            <a href="https://www.linkedin.com/in/samscully/" target="_blank">
+              <button class="btn border-2 border-accent text-accent px-5 py-2.5 rounded-lg font-semibold hover:bg-accent hover:text-white">
+                Message on LinkedIn
+              </button>
+            </a>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- footer -->
+      <footer class="mt-10 py-6 border-t border-border-light text-center text-muted-text">
+        <a href="https://www.linkedin.com/in/samscully/" target="_blank" class="font-bold text-dark-text hover:text-accent transition flex items-center justify-center gap-2 text-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current"><path d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0..."/></svg>
+          Sam Scully — Organizer
+        </a>
+      </footer>
+
+    </div>
+
+    <script>
+      // booking function
+      function handleBooking() {
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const location = document.getElementById("location").value.trim();
+        const date = document.getElementById("date").value;
+        const msg = document.getElementById("book-msg");
+
+        if (!name || !email || !location || !date) {
+          msg.textContent = "Fill all fields, bestie.";
+          msg.className = "text-xs text-red-500";
+          return;
+        }
+
+        msg.textContent = "Thanks — request submitted! We’ll reach out shortly.";
+        msg.className = "text-xs text-accent font-semibold";
+
+        // Simulated submission
+        console.log("Booking submitted:", { name, email, location, date });
+        
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("location").value = "";
+        document.getElementById("date").value = "";
+      }
+
+      // Mobile nav toggle
+      function toggleMobileMenu() {
+        const nav = document.getElementById("mobileNav");
+        nav.classList.toggle("hidden");
+        nav.classList.toggle("flex");
+      }
+    </script>
+
+  </body>
+</html>
